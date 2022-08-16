@@ -1,15 +1,18 @@
 [features]
 seeds = false
 skip-lint = false
-[programs.localnet]
-aidl_smart_contract_rust = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+# [programs.localnet]
+[programs.devnet]
+aidl_smart_contract_rust = "AxEL6oqhuMeeGnAZJ9rzoM9FztdBUt3t7LmKgUwKF3Dk"
 
 [registry]
 url = "https://api.apr.dev"
 
 [provider]
-cluster = "localnet"
+# cluster = "localnet"
+cluster = "devnet"
 wallet = "/home/alexoukos/.config/solana/id.json"
 
 [scripts]
-test = "yarn run mocha -t 1000000 tests/"
+# test = "yarn run mocha -t 1000000 tests/"
+test = "node tests/aidl-smart-contract-rust.js"
